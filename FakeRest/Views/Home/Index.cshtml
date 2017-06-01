@@ -35,7 +35,8 @@
             </div>
             <div class="panel-body">
                 <ol>
-                    <li><a href="#userDataSet">Users</a></li>
+                    <li><a href="#userDateSet">JeopardyQs</a></li>
+                    <li><a href="#jeopardyQ">Jeopardy Questions</a></li>
                 </ol>
             </div>
         </div>
@@ -46,63 +47,131 @@
     <div class="col-md-12">
         <div class="panel panel-primary">
             <div class="panel-heading">
-                <div id="userDataSet">
-                    <h3 class="panel-title">Users</h3>
+                <div id="userDateSet">
+                    <h3 class="panel-title">User</h3>
                 </div>
             </div>
             <div class="panel-body">
                 
-                    <table class="table table-striped">
-                        <tbody>
-                        <tr>
-                            <td>GET</td>
-                            <td><a href="/api/user">/api/user</a></td>
-                            <td>Gets all users</td>
-                        </tr>
-                        <tr>
-                            <td>GET</td>
-                            <td><a href="/api/user/1">/api/user/1</a></td>
-                            <td>Gets user with Id=1</td>
-                        </tr>
-                        <tr>
-                            <td>GET</td>
-                            <td><a href="/api/user?q=Malory">/api/user?q=Malory</a></td>
-                            <td>Full text search for query param "q"</td>
-                        </tr>
-                        <tr>
-                            <td>GET</td>
-                            <td><a href="/api/user?page=2&limit=30">/api/user?page=2&limit=30</a></td>
-                            <td>Gets page 2 of size 30</td>
-                        </tr>
-                        <tr>
-                            <td>GET</td>
-                            <td><a href="/api/user?sortField=FirstName&order=DESC">/api/user?sortField=FirstName&order=DESC</a></td>
-                            <td>"DESC"/"ASC" Order by supplied "sortField"</td>
-                        </tr>
+                <table class="table table-striped">
+                    <tbody>
+                    <tr>
+                        <td>GET</td>
+                        <td><a href="/api/User">/api/User</a></td>
+                        <td>Gets all Users</td>
+                    </tr>
+                    <tr>
+                        <td>GET</td>
+                        <td><a href="/api/User/1">/api/User/1</a></td>
+                        <td>Gets User with Id=1</td>
+                    </tr>
+                    <tr>
+                        <td>GET</td>
+                        <td><a href="/api/User?q=Malory">/api/User?q=Malory</a></td>
+                        <td>Full text search for query param "q"</td>
+                    </tr>
+                    <tr>
+                        <td>GET</td>
+                        <td><a href="/api/User?page=2&limit=30">/api/User?page=2&limit=30</a></td>
+                        <td>Gets page 2 of size 30</td>
+                    </tr>
+                    <tr>
+                        <td>GET</td>
+                        <td><a href="/api/User?sortField=FirstName&order=DESC">/api/User?sortField=FirstName&order=DESC</a></td>
+                        <td>"DESC"/"ASC" Order by supplied "sortField"</td>
+                    </tr>
                             
-                        <tr>
-                            <td>GET</td>
-                            <td><a href="/api/user?q=Female&page=2&limit=30&sortField=FirstName&order=DESC">/api/user?q=Female&page=2&limit=30&sortField=FirstName&order=DESC</a></td>
-                            <td>Search for all record containing Female text and gets Page 2 of size 30 from return resulted ordered by FirstName in Descending order</td>
-                        </tr>
+                    <tr>
+                        <td>GET</td>
+                        <td><a href="/api/User?q=Female&page=2&limit=30&sortField=FirstName&order=DESC">/api/User?q=Female&page=2&limit=30&sortField=FirstName&order=DESC</a></td>
+                        <td>Search for all record containing Female text and gets Page 2 of size 30 from return resulted ordered by FirstName in Descending order</td>
+                    </tr>
 
-                        <tr>
-                            <td>POST</td>
-                            <td>/api/user</td>
-                            <td></td>
-                        </tr>
-                        <tr>
-                            <td>PUT</td>
-                            <td>/api/user</td>
-                            <td></td>
-                        </tr>
-                        <tr>
-                            <td>DELETE</td>
-                            <td>/api/user/1</td>
-                            <td></td>
-                        </tr>
-                        </tbody>
-                    </table>
+                    <tr>
+                        <td>POST</td>
+                        <td>/api/User</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>PUT</td>
+                        <td>/api/User</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>DELETE</td>
+                        <td>/api/User/1</td>
+                        <td></td>
+                    </tr>
+                    </tbody>
+                </table>
+                
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<div class="row">
+    <div class="col-md-12">
+        <div class="panel panel-primary">
+            <div class="panel-heading">
+                <div id="jeopardyQ">
+                    <h3 class="panel-title">Jeopardy Questions</h3>
+                </div>
+            </div>
+            <div class="panel-body">
+                
+                <table class="table table-striped">
+                    <tbody>
+                    <tr>
+                        <td>GET</td>
+                        <td><a href="/api/JeopardyQ">/api/JeopardyQ</a></td>
+                        <td>Gets all JeopardyQs</td>
+                    </tr>
+                    <tr>
+                        <td>GET</td>
+                        <td><a href="/api/JeopardyQ/1">/api/JeopardyQ/1</a></td>
+                        <td>Gets JeopardyQ with Id=1</td>
+                    </tr>
+                    <tr>
+                        <td>GET</td>
+                        <td><a href="/api/JeopardyQ?q=Infrared rays">/api/JeopardyQ?q=Infrared rays</a></td>
+                        <td>Full text search for query param "q"</td>
+                    </tr>
+                    <tr>
+                        <td>GET</td>
+                        <td><a href="/api/JeopardyQ?page=2&limit=30">/api/JeopardyQ?page=2&limit=30</a></td>
+                        <td>Gets page 2 of size 30</td>
+                    </tr>
+                    <tr>
+                        <td>GET</td>
+                        <td><a href="/api/JeopardyQ?sortField=Category&order=DESC">/api/JeopardyQ?sortField=Category&order=DESC</a></td>
+                        <td>"DESC"/"ASC" Order by supplied "sortField"</td>
+                    </tr>
+                            
+                    <tr>
+                        <td>GET</td>
+                        <td><a href="/api/JeopardyQ?q=baseball&page=1&limit=30&sortField=Category&order=DESC">/api/JeopardyQ?q=baseball&page=1&limit=30&sortField=Category&order=DESC</a></td>
+                        <td>Search for all record containing baseball text and gets Page 2 of size 30 from return resulted ordered by Category in Descending order</td>
+                    </tr>
+
+                    <tr>
+                        <td>POST</td>
+                        <td>/api/JeopardyQ</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>PUT</td>
+                        <td>/api/JeopardyQ</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>DELETE</td>
+                        <td>/api/JeopardyQ/1</td>
+                        <td></td>
+                    </tr>
+                    </tbody>
+                </table>
                 
             </div>
         </div>
