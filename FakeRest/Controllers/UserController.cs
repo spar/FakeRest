@@ -22,6 +22,7 @@ namespace FakeRest.Controllers
         }
 
         [HttpPost]
+        [Route("")]
         public IHttpActionResult Create(User user)
         {
             if (user == null)
@@ -30,6 +31,7 @@ namespace FakeRest.Controllers
         }
 
         [HttpPut]
+        [Route("")]
         public IHttpActionResult Update(User user)
         {
             if (user == null)
