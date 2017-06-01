@@ -15,13 +15,6 @@ namespace FakeRest.Controllers
             File.ReadAllText(HttpContext.Current.Server.MapPath("~/App_Data/UserJsonData.json")));
 
         [HttpGet]
-        [Route("")]
-        public IHttpActionResult GetAll()
-        {
-            return Ok(Users);
-        }
-
-        [HttpGet]
         [Route("{id:int}")]
         public IHttpActionResult Get(int id)
         {
@@ -55,9 +48,24 @@ namespace FakeRest.Controllers
 
         [HttpGet]
         [Route("")]
-        public IHttpActionResult Search(string q)
+        public IHttpActionResult SearchPageSort(string q = "", int page = 0, int limit = 10, string sortField = "Id", string order = "desc")
         {
-            return Ok(Users.Where(x => x.GetSearchableText().Contains(q)));
+            var result = Users;
+            if (!string.IsNullOrEmpty(q))
+                result = Users.Where(x => x.GetSearchableText().Contains(q));
+
+            if (page > 0)
+                result = result.Skip((page - 1) * limit).Take(limit);
+
+            if (string.IsNullOrEmpty(sortField)) return Ok(result);
+            var p = typeof(User).GetProperty(sortField);
+            if (p != null)
+            {
+                result = order.ToLower() == "desc"
+                    ? result.OrderByDescending(x => p.GetValue(x))
+                    : result.OrderBy(x => p.GetValue(x));
+            }
+            return Ok(result);
         }
     }
 }
