@@ -1,5 +1,6 @@
 ﻿using System.Net.Http.Formatting;
 using System.Web.Http;
+using Newtonsoft.Json;
 
 namespace FakeRest
 {
@@ -19,7 +20,9 @@ namespace FakeRest
 
             config.Formatters.Clear();
             //config.Formatters.Add(new XmlMediaTypeFormatter());
-            config.Formatters.Add(new JsonMediaTypeFormatter());
+            var jsonMediaTypeFormatterer =
+                new JsonMediaTypeFormatter {SerializerSettings = {Formatting = Formatting.Indented}};
+            config.Formatters.Add(jsonMediaTypeFormatterer);
         }
     }
 }
