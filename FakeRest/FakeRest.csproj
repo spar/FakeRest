@@ -134,6 +134,7 @@
     <Compile Include="Controllers\BaseController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\JeopardyQController.cs" />
+    <Compile Include="Controllers\NasaPatent.cs" />
     <Compile Include="Controllers\NasaFacility.cs" />
     <Compile Include="Controllers\UserController.cs" />
     <Compile Include="Global.asax.cs">
@@ -142,11 +143,12 @@
     <Compile Include="Models\BaseClass.cs" />
     <Compile Include="Models\JeopardyQ.cs" />
     <Compile Include="Models\NasaFacility.cs" />
+    <Compile Include="Models\NasaPatent.cs" />
     <Compile Include="Models\User.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="App_Data\NasaFacilityJsonData.json" />
+    <Content Include="App_Data\NasaFacilityJsonData.json" />
     <Content Include="Content\bootstrap-theme.css" />
     <Content Include="Content\bootstrap-theme.min.css" />
     <Content Include="Content\bootstrap.css" />
@@ -165,6 +167,7 @@
     <Content Include="Content\bootstrap-theme.min.css.map" />
     <Content Include="Content\bootstrap-theme.css.map" />
     <Content Include="App_Data\JeopardyQJsonData.json" />
+    <Content Include="App_Data\NasaPatentJsonData.json" />
     <None Include="Properties\PublishProfiles\Default Settings.pubxml" />
     <None Include="Scripts\jquery-3.1.1.intellisense.js" />
     <Content Include="Scripts\bootstrap.js" />
